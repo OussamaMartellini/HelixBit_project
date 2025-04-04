@@ -1,0 +1,242 @@
+/* Layout system */
+.layout-system {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.background-video {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+.layout-system::after {
+    content: "";
+    min-width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+
+
+}
+
+
+a {
+    text-decoration: none ;
+    color: white;
+
+}
+
+/* Header */
+.nav-custom {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    min-height: 65px;
+    width: 100%;
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+
+}
+
+
+/* .logo-nav{
+
+}
+
+.search-nav{
+    
+}
+
+.list-nav{
+
+} */
+
+/* Side container */
+.side-container {
+    position: relative;
+    left: 0px;
+    display: flex;
+    min-height: 100vh;
+    width: 230px;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 5px 5px 15px 5px rgb(0, 0, 0, 0.6);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    margin-right: 20px;
+
+
+}
+
+.sidebar {
+    margin: 20px;
+    margin-top: 30px;
+}
+
+
+.genres-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.logo-category {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255,0.2);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.logo-category> span{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+/* Main container */
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 65px;
+    z-index: 1;
+
+}
+
+.main-container {
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    min-height: 80%;
+    width: 100%;
+
+}
+
+/* carousel */
+.carousel{
+    width: 75%;
+    
+}
+.carousel-inner{
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+}
+.carousel-item{
+    border-radius: 20px;
+}
+.slide-carousel{
+    width: 100%;
+    
+    
+
+}
+
+/* cardGame */
+.card-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 272px;
+    width: 392px;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    text-align: start;
+    transition: 0.15s;
+}
+
+.card-custom:hover {
+    scale: 1.05;
+}
+
+.img-card-custom {
+    display: flex;
+    min-width: 100%;
+    max-height: 250px;
+    border-radius: 16px 16px 0px 0px;
+    object-fit: cover;
+    
+}
+
+.card-custom > span {
+    display: flex;
+    width: 100%;
+    min-height: 250px;
+}
+
+
+.body-card-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+/* gamePage */
+
+
+.container-img-game{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.img-game{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* Footer */
+footer {
+    position: relative;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
