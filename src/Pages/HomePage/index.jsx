@@ -13,29 +13,7 @@ function HomePage() {
 
 
   const { data, loading, error, updateUrl } = useFetchSolution(initialUrl);
-  // const [data, setData] = useState(null);
-  // const [error, setError] = useState(null);
 
-  // const load = async () => {
-  //   try {
-  //     const response = await fetch(initialUrl);
-  //     if (!response.ok) {
-  //       throw new Error(response.statusText);
-  //     }
-  //     const json = await response.json();
-  //     setData(json);
-
-  //   } catch (error) {
-  //     setError(error.message);
-  //     setData(null);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   load();
-
-
-  // }, [])
 
   return (
     <div className="container-fluid p-0 ">
