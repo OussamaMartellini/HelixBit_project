@@ -1,32 +1,19 @@
-import { useEffect, useState } from "react"
-import { Link } from "react-router"
+import { useContext } from "react"
+import { Link, useNavigate } from "react-router"
 import SearchBar from "./Searchbar"
 import supabase from "../supabase/supabase-client"
+import SessionContext from "../context/SessionContext"
 
 function Header() {
-    const [session, setSession] = useState(null);
-
-    const getSession = async () => {
-        const { data } = await supabase.auth.getSession();
-        if (data.session) {
-            console.log(data);
-            setSession(data);
-        } else {
-            setSession(null);
-        }
-    };
+    const navigate = useNavigate();
+    const { session } = useContext(SessionContext);
 
     const signOut = async () => {
-        const { error } = await supabase.auth.signOut();
+        const { error } = await supabase.auth.signOut()
         if (error) console.log(error);
         alert("Signed out 👋")
-        getSession();
+        navigate("/");
     }
-
-
-    useEffect(() => {
-        getSession();
-    }, []);
 
     return (
         <nav className="nav-custom">
