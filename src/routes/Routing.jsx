@@ -7,6 +7,7 @@ import GamePage from "../Pages/GamePage";
 import SearchPage from "../Pages/SearchPage";
 import RegisterPage from "../Pages/Register";
 import LoginPage from "../Pages/Login";
+import AccountPage from "../Pages/Account";
 
 function Routing() {
     return (
@@ -33,6 +34,9 @@ function Routing() {
 
                     {/* pagina di accesso */}
                     <Route path="/login" element={<LoginPage />}/>
+
+                    {/* pagina del profilo */}
+                    <Route path="/account" element={<AccountPage />}/>
                 </Route>
             </Routes>
         </BrowserRouter>

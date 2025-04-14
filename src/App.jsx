@@ -1,11 +1,11 @@
-import Routing from "./routers/Routing"
 import SessionProvider from "./context/SessionProvider"
+import Routing from "./routes/Routing";
 
 function App() {
 
   return (
     <SessionProvider>
-      <Routing />    
+      <Routing/>
     </SessionProvider>
   );
 }

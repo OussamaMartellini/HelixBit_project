@@ -7,7 +7,7 @@ function SessionProvider({ children }) {
     
     useEffect(() => {
         const {
-            data: { subscription }
+            data: { subscription },
         } = supabase.auth.onAuthStateChange((event, session) => {
             if (event === "SIGNED_OUT") {
                 setSession(null);
