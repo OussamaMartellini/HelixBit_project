@@ -28,8 +28,11 @@ function Header() {
                             <details className="dropdown">
                                 <summary>Hey {session?.user.user_metadata.first_name} ✌️</summary>
                                 <ul dir="rtl">
+                                <li>
+                                        <Link to="/profile">Profile</Link>
+                                    </li>
                                     <li>
-                                        <Link to="/account">Account</Link>
+                                        <Link to="/account">Account Setting</Link>
                                     </li>
                                     <li>
                                         <button onClick={signOut}>Logout</button>

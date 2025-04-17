@@ -1,5 +1,6 @@
 import { useParams } from "react-router"
 import useFetchSolution from "../../hook/useFetchSolution";
+import ToggleFavorite from "../../components/ToggleFavorite";
 
 function GamePage() {
     const { id } = useParams();
@@ -23,6 +24,7 @@ function GamePage() {
                     <img src={data && data.background_image} alt={`image of ${data && data.name}`}
                     className="img-game" />
                 </div>
+                    <ToggleFavorite data={data} />
             </div>
             <div className="col-5 bg-warning vh-100"></div>
 

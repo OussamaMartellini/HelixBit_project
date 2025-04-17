@@ -8,6 +8,7 @@ import SearchPage from "../Pages/SearchPage";
 import RegisterPage from "../Pages/Register";
 import LoginPage from "../Pages/Login";
 import AccountPage from "../Pages/Account";
+import ProfilePage from "../Pages/Profile";
 
 function Routing() {
     return (
@@ -35,8 +36,11 @@ function Routing() {
                     {/* pagina di accesso */}
                     <Route path="/login" element={<LoginPage />}/>
 
-                    {/* pagina del profilo */}
+                    {/* pagina del modifica profilo */}
                     <Route path="/account" element={<AccountPage />}/>
+
+                    {/* pagina Profilo */}
+                    <Route path="/profile" element={<ProfilePage />}/>
                 </Route>
             </Routes>
         </BrowserRouter>
