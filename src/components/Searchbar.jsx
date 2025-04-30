@@ -21,16 +21,17 @@ function SearchBar() {
 
     return(
         <form onSubmit={handleSearch}>
-            <fieldset role="group">
-                <input type="text"
+           
+                <input className="searchbar"
+                type="text"
                 name="search"
                 placeholder={areaInvalid ? "devi cercare qualcosa" : "search a game"}
                 onChange={(event => setSearch(event.target.value))}
                 value={search}
                 area-invalid={areaInvalid}
                 />
-                <input type="submit" value={"Go"} />
-            </fieldset>
+                <input className="btn btn-success ms-2" type="submit" value={"Search"} />
+           
         </form>
     )
 }

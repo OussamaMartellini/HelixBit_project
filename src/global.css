@@ -33,11 +33,11 @@
 }
 
 a {
-    text-decoration: none ;
+    text-decoration: none;
     color: white;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -49,7 +49,7 @@ ul{
     min-height: 65px;
     width: 100%;
     z-index: 999;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 0.11);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -59,17 +59,36 @@ ul{
 }
 
 
-/* .logo-nav{
-
+ .logo-nav{
+width: 20%;
 }
 
-.search-nav{
-    
+.search-nav {
+ width: 35%;
+}
+.searchbar{
+    border-radius: 15px;
+    width: 80%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    color: white;
+    padding-left: 10px;
+}
+.searchbar::placeholder{
+    color: rgb(248, 248, 248);
+    opacity: 0.5;
+}
+.searchbar:focus{
+    outline: none;
+ 
 }
 
-.list-nav{
-
-} */
+.list-nav {
+    margin-right: 20px;
+}
 
 /* Side container */
 .side-container {
@@ -106,16 +125,18 @@ ul{
     width: 35px;
     height: 35px;
     border-radius: 10px;
-    border: 1px solid rgb(255, 255, 255,0.2);
+    border: 1px solid rgb(255, 255, 255, 0.2);
     justify-content: center;
     align-items: center;
     display: flex;
 }
-.logo-category> span{
+
+.logo-category>span {
     display: flex;
     width: 100%;
     height: 100%;
 }
+
 .logo-image {
     width: 100%;
     height: 100%;
@@ -146,24 +167,27 @@ ul{
 }
 
 /* carousel */
-.carousel{
+.carousel {
     width: 75%;
-    
+
 }
-.carousel-inner{
+
+.carousel-inner {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.11);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     backdrop-filter: blur(7.2px);
     -webkit-backdrop-filter: blur(7.2px);
 }
-.carousel-item{
+
+.carousel-item {
     border-radius: 20px;
 }
-.slide-carousel{
+
+.slide-carousel {
     width: 100%;
-    
-    
+
+
 
 }
 
@@ -195,10 +219,10 @@ ul{
     max-height: 250px;
     border-radius: 16px 16px 0px 0px;
     object-fit: cover;
-    
+
 }
 
-.card-custom > span {
+.card-custom>span {
     display: flex;
     width: 100%;
     min-height: 250px;
@@ -219,18 +243,42 @@ ul{
 /* gamePage */
 
 
-.container-img-game{
+.container-img-game {
     display: flex;
+    position: relative;
     width: 100%;
     height: auto;
 }
 
-.img-game{
+.img-game {
     display: flex;
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
+.toggleFavorite {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* chat games */
+.chatContainer {
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    padding: 20px 10px;
+}
+
+.chatContainerContent {
+    height: 350px;
+    overflow-y: auto;
+}
+
 /* Footer */
 footer {
     position: relative;

@@ -47,7 +47,7 @@ function RealtimeChat({ data }) {
     }, [messages]);
 
     return (
-        <div ref={messageRef}>
+        <div ref={messageRef} className="chatContainerContent">
             {loadingInitial && <progress></progress>}
             { error && <article>{error}</article> }
             {messages && 

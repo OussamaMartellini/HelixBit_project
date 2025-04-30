@@ -28,7 +28,7 @@ function Chatbox({ data }) {
     };
 
     return (
-        <div>
+        <div className="chatContainer">
             <h4>Games chat</h4>
             <div>
                 <RealtimeChat data={data && data} />
