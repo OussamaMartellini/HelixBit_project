@@ -12,7 +12,6 @@ function GamePage() {
 
     const initialUrl = `${apiUrl}games/${id}?key=${apiKey}`
     const { data, loading, error, updateUrl } = useFetchSolution(initialUrl);
-    console.log(data);
 
     const [extended, setExstended] = useState(false);
 

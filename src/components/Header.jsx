@@ -30,9 +30,6 @@ function Header() {
                 {session ? (
                     <div className="d-flex flex-column align-items-center">
                         <ul className="d-flex p-0 m-0 aling-items-center">
-                        <li className="mx-2 d-flex align-items-center">
-                            <img src="" alt="" />
-                            </li>
                             <li className="mx-2 d-flex align-items-center">
                             <p className="m-0">Hey {session?.user.user_metadata.first_name} ✌️</p>
                             </li>
