@@ -22,7 +22,7 @@ function Header() {
 
     return (
         <nav className="nav-custom">
-            <div className="logo-nav"><a href="/">Rehactor</a></div>
+            <div className="logo-nav"><a className="d-flex justify-content-end" href="/"><img src="./logo.png" className="logo-nav-img" alt="Logo HelixBit" /></a></div>
             <div className="search-nav">
                 <SearchBar />
             </div>

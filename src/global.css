@@ -41,12 +41,19 @@ ul {
     list-style: none;
 }
 
+progress {
+    width: 80%;
+    height: 20px;
+    margin: 0 auto;
+    display: block;
+}
+
 /* Header */
 .nav-custom {
     display: flex;
     position: fixed;
     top: 0px;
-    min-height: 65px;
+    min-height: 85px;
     width: 100%;
     z-index: 999;
     justify-content: space-between;
@@ -59,14 +66,20 @@ ul {
 }
 
 
- .logo-nav{
-width: 20%;
+.logo-nav {
+    width: 200px
+}
+
+
+.logo-nav-img {
+    width: 85px
 }
 
 .search-nav {
- width: 35%;
+    width: 35%;
 }
-.searchbar{
+
+.searchbar {
     border-radius: 15px;
     width: 80%;
     height: 40px;
@@ -77,17 +90,95 @@ width: 20%;
     color: white;
     padding-left: 10px;
 }
-.searchbar::placeholder{
+
+.searchbar::placeholder {
     color: rgb(248, 248, 248);
     opacity: 0.5;
 }
-.searchbar:focus{
+
+.searchbar:focus {
     outline: none;
- 
+
 }
 
 .list-nav {
     margin-right: 20px;
+}
+
+/* form register */
+
+.form-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    min-height: 550px;
+    max-height: 750px;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.inputRegister {
+    border-radius: 15px;
+    width: 80%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    color: white;
+    padding-left: 10px;
+
+}
+
+.btnRegister {
+    width: 100px;
+    margin-top: 75px;
+    margin-bottom: 25px;
+
+}
+
+/* form login */
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    min-height: 250px;
+    max-height: 500px;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.inputLogin {
+    border-radius: 15px;
+    width: 80%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    color: white;
+    padding-left: 10px;
+
+}
+
+.btnlogin {
+    width: 100px;
+    margin-top: 25px;
 }
 
 /* Side container */
@@ -150,7 +241,7 @@ width: 20%;
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 65px;
+    top: 85px;
     z-index: 1;
 
 }
@@ -164,6 +255,86 @@ width: 20%;
     min-height: 80%;
     width: 100%;
 
+}
+
+/* pagination */
+
+.pagination-list {
+    width: 300px;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+.pagination-item {
+    display: flex;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.15s;
+
+}
+
+.pagination-item.active a {
+    width: 100%;
+    color: white;
+    /* Colore del testo bianco */
+    background-color: #0059ff;
+    /* Colore di sfondo blu (o qualsiasi colore preferisci) */
+    padding: 5px 10px;
+    /* Per un padding migliore */
+    text-decoration: none;
+    /* Rimuovi sottolineature */
+}
+
+.pagination-item-prev {
+    display: flex;
+    border-radius: 16px 0px 0px 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.15s;
+}
+
+.pagination-item-next {
+    display: flex;
+    border-radius: 0 16px 16px 0px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.15s;
+}
+
+.pagination-item-prev:hover {
+    scale: 1.1;
+    z-index: 2;
+}
+
+.pagination-item:hover {
+    scale: 1.1;
+    z-index: 2;
+}
+
+.pagination-item-next:hover {
+    scale: 1.1;
+    z-index: 2;
 }
 
 /* carousel */
@@ -277,6 +448,18 @@ width: 20%;
 .chatContainerContent {
     height: 350px;
     overflow-y: auto;
+}
+
+.chatbar {
+    border-radius: 15px;
+    width: 70%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    color: white;
+    padding-left: 10px;
 }
 
 /* Footer */

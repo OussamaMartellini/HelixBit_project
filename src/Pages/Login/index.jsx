@@ -58,10 +58,11 @@ function LoginPage() {
     }
 
     return(
-        <div className="container-fluid">
-        <form onSubmit={onSubmit} noValidate className="bg-info">
+        <div className="container-fluid p-5 mt-5 d-flex justify-content-center">
+        <form onSubmit={onSubmit} noValidate className="form-login">
+        <h1 className="text-center pb-4">Login</h1>
             <label htmlFor="email">Email:</label>
-            <input
+            <input className="inputLogin"
                 type="email"
                 id="email"
                 name="email"
@@ -71,10 +72,10 @@ function LoginPage() {
                 aria-invalid={isInvalid("email")}
                 required
             />
-            {formErrors.email && <small>{formErrors.email}</small>}
+            {formErrors.email && <small className="text-danger fw-bold my-1">{formErrors.email}</small>}
 
-            <label htmlFor="password">Password:</label>
-            <input
+            <label htmlFor="password"  className="mt-3">Password:</label>
+            <input className="inputLogin"
                 type="password"
                 id="password"
                 name="password"
@@ -84,10 +85,10 @@ function LoginPage() {
                 aria-invalid={isInvalid("password")}
                 required
             />
-            {formErrors.password && <small>{formErrors.password}</small>}
+            {formErrors.password && <small className="text-danger fw-bold my-1">{formErrors.password}</small>}
 
             <br />
-            <button type="submit">Sign in</button>
+            <button type="submit" className="btn btn-outline-success btnlogin">Sign in</button>
 
         </form>
     </div>

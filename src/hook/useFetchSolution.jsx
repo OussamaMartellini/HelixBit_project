@@ -25,6 +25,8 @@ function useFetchSolution(initialUrl) {
             }
             const json = await response.json();
             setData(json);
+            await console.log(json);
+            
         } catch (error) {
             setError(error.message);
             setData(null);

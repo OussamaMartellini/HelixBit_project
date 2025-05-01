@@ -34,9 +34,9 @@ function Chatbox({ data }) {
                 <RealtimeChat data={data && data} />
             </div>
             <form onSubmit={hendleMessageSubmit}>
-                <fieldset role="group">
-                    <input type="text" name="message" placeholder="Chat..." />
-                    <button type="submit">Invia</button>
+                <fieldset role="group" className="d-flex">
+                    <input type="text" name="message" placeholder="Chat..." className="me-2 chatbar"/>
+                    <button type="submit" className="btn btn-outline-success">Invia</button>
                 </fieldset>
             </form>
         </div>

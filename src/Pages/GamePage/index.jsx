@@ -18,16 +18,22 @@ function GamePage() {
 
     const toggleReadMore = () => setExstended(!extended);
 
-    
+
 
 
     return (
         <div className="container-fluid p-0  w-100">
             <h1 className="text-center my-5 fw-bold"> {data && data.name} </h1>
-            <div className="row justify-content-center w-100 ">
-                <div className="col-7">
+            {loading && (
+                <div className="text-center my-5">
+                    <progress />
+                </div>
+            )}
+
+            {data && <div className="row justify-content-center w-100 ">
+                <div className="col-12 col-lg-7">
                     <div className="container-img-game">
-                        <img src={data && data.background_image} alt={`image of ${data && data.name}`}
+                        <img src={data.background_image} alt={`image of ${data && data.name}`}
                             className="img-game" />
                         <div className="toggleFavorite">
 
@@ -35,17 +41,17 @@ function GamePage() {
                         </div>
                     </div>
                     <div className="my-3">
-                        { extended ?  data?.description_raw : data?.description_raw.slice(0,500)+" ..." }
+                        {extended ? data?.description_raw : data?.description_raw.slice(0, 500) + " ..."}
                         <button onClick={toggleReadMore}>
-                            {extended ? "Show less": "Read more"}
+                            {extended ? "Show less" : "Read more"}
                         </button>
                     </div>
                 </div>
-                <div className="col-5">
+                <div className="col-12 col-lg-5">
                     <Chatbox data={data && data} />
                 </div>
 
-            </div>
+            </div>}
         </div>
     )
 }

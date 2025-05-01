@@ -68,10 +68,12 @@ function RegisterPage() {
 
 
     return (
-        <div className="container-fluid">
-            <form onSubmit={onSubmit} noValidate className="bg-info">
+        <div className="container-fluid p-5 mt-5 d-flex justify-content-center">
+            
+            <form onSubmit={onSubmit} noValidate className=" form-register">
+            <h1 className="text-center pb-4">Register</h1>
                 <label htmlFor="email">Email:</label>
-                <input
+                <input className="inputRegister"
                     type="email"
                     id="email"
                     name="email"
@@ -81,10 +83,10 @@ function RegisterPage() {
                     aria-invalid={isInvalid("email")}
                     required
                 />
-                {formErrors.email && <small>{formErrors.email}</small>}
+                {formErrors.email && <small className="text-danger fw-bold my-1">{formErrors.email}</small>}
 
-                <label htmlFor="firstName">First Name:</label>
-                <input
+                <label htmlFor="firstName" className="mt-3">First Name:</label>
+                <input className="inputRegister"
                     type="text"
                     id="firstName"
                     name="firstName"
@@ -94,10 +96,10 @@ function RegisterPage() {
                     aria-invalid={isInvalid("firstName")}
                     required
                 />
-                {formErrors.firstName && <small>{formErrors.firstName}</small>}
+                {formErrors.firstName && <small className="text-danger fw-bold my-1">{formErrors.firstName}</small>}
 
-                <label htmlFor="lastName">Last Name:</label>
-                <input
+                <label htmlFor="lastName" className="mt-3">Last Name:</label>
+                <input className="inputRegister"
                     type="text"
                     id="lastName"
                     name="lastName"
@@ -107,10 +109,10 @@ function RegisterPage() {
                     aria-invalid={isInvalid("lastName")}
                     required
                 />
-                {formErrors.lastName && <small>{formErrors.lastName}</small>}
+                {formErrors.lastName && <small className="text-danger fw-bold my-1">{formErrors.lastName}</small>}
 
-                <label htmlFor="username">Username:</label>
-                <input
+                <label htmlFor="username" className="mt-3">Username:</label>
+                <input className="inputRegister"
                     type="text"
                     id="username"
                     name="username"
@@ -120,10 +122,10 @@ function RegisterPage() {
                     aria-invalid={isInvalid("username")}
                     required
                 />
-                {formErrors.username && <small>{formErrors.username}</small>}
+                {formErrors.username && <small className="text-danger fw-bold my-1">{formErrors.username}</small>}
 
-                <label htmlFor="password">Password:</label>
-                <input
+                <label htmlFor="password" className="mt-3">Password:</label>
+                <input className="inputRegister"
                     type="password"
                     id="password"
                     name="password"
@@ -133,10 +135,10 @@ function RegisterPage() {
                     aria-invalid={isInvalid("password")}
                     required
                 />
-                {formErrors.password && <small>{formErrors.password}</small>}
+                {formErrors.password && <small className="text-danger fw-bold my-1">{formErrors.password}</small>}
 
-                <br />
-                <button type="submit">Sign Up</button>
+                
+                <button type="submit" className="btn btn-outline-success btnRegister">Sign Up</button>
 
             </form>
         </div>
