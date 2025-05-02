@@ -22,7 +22,7 @@ function LoginPage() {
             setFormErrors(errors)
             console.log(errors);
         } else {
-            console.log(data);
+            
             let { error } = await supabase.auth.signInWithPassword({
                 email: data.email,
                 password: data.password
