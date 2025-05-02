@@ -50,16 +50,16 @@ import supabase from '../supabase/supabase-client'
   }
 
   return (
-    <div>
+    <div className='d-flex align-items-center justify-content-center w-100'>
       {avatarUrl ? (
         <img
           src={avatarUrl}
           alt="Avatar"
-          className="avatar image"
+          className="avatar-account-settings me-2"
           style={{ height: size, width: size, boxShadow: "3px 3px 8px black" }}
         />
       ) : (
-        <div className="avatar no-image" style={{ height: size, width: size }} />
+        <div className="avatar no-image me-2" style={{ height: size, width: size }} />
       )}
       <div style={{ width: size }}>
         <input
@@ -68,6 +68,7 @@ import supabase from '../supabase/supabase-client'
           accept="image/*"
           onChange={uploadAvatar}
           disabled={uploading}
+          className='ms-2'
         />
       </div>
     </div>

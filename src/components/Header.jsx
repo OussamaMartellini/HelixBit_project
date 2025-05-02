@@ -22,7 +22,7 @@ function Header() {
 
     return (
         <nav className="nav-custom">
-            <div className="logo-nav"><a className="d-flex justify-content-end" href="/"><img src="./logo.png" className="logo-nav-img" alt="Logo HelixBit" /></a></div>
+            <div className="logo-nav"><a className="d-flex justify-content-end" href="/"><img src="../../public/logo.png" className="logo-nav-img" alt="Logo HelixBit" /></a></div>
             <div className="search-nav">
                 <SearchBar />
             </div>
@@ -46,11 +46,11 @@ function Header() {
                     </div>
 
                 ) : (
-                <ul className="d-flex p-0 m-0 aling-items-center">
-                    <li className="mx-2 d-flex align-items-center">
+                <ul className="d-flex p-0 m-0 align-items-center">
+                    <li className="mx-2 d-flex align-items-center fw-bolder">
                         <Link to="/login">Login</Link>
                     </li>
-                    <li className="mx-2 d-flex align-items-center">
+                    <li className="mx-2 d-flex align-items-center fw-bolder">
                         <Link to="/register">Register</Link>
                     </li>
                 </ul>)}

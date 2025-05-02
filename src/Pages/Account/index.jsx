@@ -61,22 +61,37 @@ function AccountPage() {
             updated_at: new Date(),
         };
 
-        const { error } = await supabase.from("profiles").upsert(updates);
+        const { error: updateError } = await supabase.from("profiles").upsert(updates);
 
-        if (error) {
-            alert(error.message);
-        } else {
-            setAvatarUrl(avatarUrl)
+        if (updateError) {
+            alert(updateError.message);
+            setLoading(false);
+            return
+         } 
+        
+        const { error: metadataError } = await supabase.auth.updateUser({
+            data: {
+                username,
+                first_name,
+                last_name,
+                avatar_url: avatarUrl,
+            },
+        });
+        if (metadataError) {
+            alert(metadataError.message);
         }
+    
+        setAvatarUrl(avatarUrl);
         setLoading(false);
+       
     }
 
 
 
     return (
-        <div className="container-fluid">
-        <h2>Profile Settings</h2>
-            <form onSubmit={updateProfile} className="bg-info">
+        <div className="container-fluid d-flex  p-5 mt-5 justify-content-center">
+            <form onSubmit={updateProfile} className="form-account">
+        <h1 className="text-center pb-4">Profile Settings</h1>
                 <Avatar
                 url={avatar_url}
                 size={150}
@@ -84,32 +99,37 @@ function AccountPage() {
                     updateProfile(event, url);
                 }}
                 />
-                <div>
+                <div className=" d-flex flex-column align-items-center text-center w-75 my-3">
                     <label htmlFor="email">Email</label>
-                    <input type="text" id="email" value={session?.user.email} disabled />
+                    <input 
+                    type="text" id="email" 
+                    value={session?.user.email} disabled  className="input-account-setting"/>
                 </div>
-                <div>
+                <div className=" d-flex flex-column align-items-center text-center w-75 mb-3">
                     <label htmlFor="username">Username</label>
                     <input
                         type="text" id="username"
                         value={username || ""}
                         onChange={(e) => setUsername(e.target.value)}
+                         className="input-account-setting"
                     />
                 </div>
-                <div>
+                <div className=" d-flex flex-column align-items-center text-center w-75 mb-3">
                     <label htmlFor="first_name">First Name</label>
                     <input
                         type="text" id="first_name"
                         value={first_name || ""}
                         onChange={(e) => setFirstName(e.target.value)}
+                         className="input-account-setting"
                     />
                 </div>
-                <div>
+                <div className=" d-flex flex-column align-items-center text-center w-75 mb-3">
                     <label htmlFor="last_name">Last Name</label>
                     <input
                         type="text" id="last_name"
                         value={last_name || ""}
                         onChange={(e) => setLastName(e.target.value)}
+                         className="input-account-setting"
                     />
                 </div>
 
@@ -117,6 +137,7 @@ function AccountPage() {
                     <button
                         type="submit"
                         disabled={loading}
+                        className="btn btn-outline-success btnlogin"
                     >
                         {loading ? "Loading ..." : "Update"}
                     </button>
