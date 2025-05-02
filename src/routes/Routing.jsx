@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Layout from "../layout/Layout";
 import HomePage from "../Pages/HomePage";
 import ErrorPage from "../Pages/error";
-import GenrePage from "../Pages/genrepage";
+import GenrePage from "../Pages/GenrePage";
 import GamePage from "../Pages/GamePage";
 import SearchPage from "../Pages/SearchPage";
 import RegisterPage from "../Pages/Register";
