@@ -71,6 +71,7 @@ function LoginPage() {
                 onBlur={onBlur("email")}
                 aria-invalid={isInvalid("email")}
                 required
+                autoComplete="username"
             />
             {formErrors.email && <small className="text-danger fw-bold my-1">{formErrors.email}</small>}
 
@@ -84,6 +85,7 @@ function LoginPage() {
                 onBlur={onBlur("password")}
                 aria-invalid={isInvalid("password")}
                 required
+                autoComplete="current-password"
             />
             {formErrors.password && <small className="text-danger fw-bold my-1">{formErrors.password}</small>}
 

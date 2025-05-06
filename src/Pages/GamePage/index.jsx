@@ -21,7 +21,7 @@ function GamePage() {
 
 
     return (
-        <div className="container-fluid p-0  w-100">
+        <div className="container-fluid p-0 d-flex align-items-center flex-column ">
             <h1 className="text-center my-5 fw-bold"> {data && data.name} </h1>
             {loading && (
                 <div className="text-center my-5">

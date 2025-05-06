@@ -75,7 +75,7 @@ function GenrePage() {
     };
 
     return (
-        <div className="container-fluid p-0">
+        <div className="container-fluid p-0 d-flex align-items-center flex-column">
             <h1 className="text-center my-5">{formattedGenre} Games </h1>
             {data && (
                 <div className="d-flex justify-content-center my-3">
@@ -115,7 +115,6 @@ function GenrePage() {
                 </div>
             )}
 
-            {/* Barra di Caricamento */}
             {loading && (
                 <div className="text-center my-5">
                     <progress className="w-100" />
@@ -136,7 +135,6 @@ function GenrePage() {
             </div>
             <h3 className="text-center my-5" >page: {page}</h3>
 
-            {/* Paginazione */}
             {data && (
                 <div className="d-flex justify-content-center my-3">
                     <ul className="pagination-list">

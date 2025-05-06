@@ -56,8 +56,8 @@ function HomePage() {
   };
 
   return (
-    <div className="container-fluid p-0">
-      <div className="row justify-content-center my-5 w-100">
+    <div className="container-fluid p-0 d-flex align-items-center flex-column">
+      <div className="row justify-content-center my-5 w-100 ">
         <Carousel />
       </div>
 
@@ -106,7 +106,7 @@ function HomePage() {
         </div>
       )}
 
-      <div className="row justify-content-center w-100">
+      <div className="row justify-content-center w-100 ">
         {error && (
           <article className="col-12 text-center text-danger">
             Error status: {error}

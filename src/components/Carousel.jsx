@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import useFetchSolution from "../hook/useFetchSolution";
 
 function Carousel() {
@@ -22,17 +23,19 @@ function Carousel() {
 
 
     return (
-        <div id="carouselExample" className="carousel slide col-12" data-bs-ride="carousel">
+        <div id="carouselExample" className="carousel slide col-12"  data-bs-ride="carousel">
             <div className="carousel-inner">
+                
                 {data && data.results.map((game, index) => (
 
-                    <div key={game.id} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                    <Link to={`/games/${game.slug}/${game.id}`}
+                    key={game.id} className={`carousel-item ${index === 0 ? "active" : ""}`}>
                         <img src={game.background_image} className="slide-carousel" alt="Slide 1" />
-                        <div className="p-3">
+                        <div className="p-3 ">
                             <h3 className="fw-bolder">{game.name}</h3>
                             <p>rating: {game.rating} / 5 </p>
                         </div>
-                    </div>
+                    </Link>
                 ))}
 
 

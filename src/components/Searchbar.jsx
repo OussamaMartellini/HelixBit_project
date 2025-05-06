@@ -20,7 +20,7 @@ function SearchBar() {
     
 
     return(
-        <form onSubmit={handleSearch}>
+        <form className="search-form" onSubmit={handleSearch}>
            
                 <input className="searchbar"
                 type="text"

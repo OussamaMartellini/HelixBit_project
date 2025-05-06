@@ -62,21 +62,54 @@ progress {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     backdrop-filter: blur(7.2px);
     -webkit-backdrop-filter: blur(7.2px);
+    transition: transform 0.3s ease-in-out;
+}
 
+@media (max-width: 991.98px) {
+    .nav-custom {
+        min-height: 50px;
+        justify-content: center;
+    }
+
+    .search-nav {
+        display: flex;
+        min-width: 90%;
+    }
+
+    .search-form input {
+        height: 35px;
+    }
+}
+
+.nav-custom.hide {
+    transform: translateY(-100%);
+}
+
+.nav-custom.show {
+    transform: translateY(0%);
 }
 
 
 .logo-nav {
-    width: 200px
+    width: 200px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
 }
 
 
 .logo-nav-img {
-    width: 85px
+    width: 85px;
 }
 
 .search-nav {
     width: 35%;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .searchbar {
@@ -104,6 +137,70 @@ progress {
 .list-nav {
     margin-right: 20px;
 }
+
+/* navbar mobile */
+
+.navbar-mobile {
+    display: flex;
+    position: fixed;
+    justify-content: space-evenly;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow:
+        rgba(0, 0, 0, 0.3) 0px -19px 38px,
+        rgba(0, 0, 0, 0.22) 0px -15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+}
+
+.navbar-mobile ul{
+    padding: 0;
+    margin: 0;
+}
+
+.logo-nav-img-mobile{
+    width: 50px;
+}
+
+.offcanvas{
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 5px 5px 15px 5px rgb(0, 0, 0, 0.6);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    color: white;
+}
+
+.blur-dropdown {
+    background: rgba(0, 0, 0, 0.795);
+    box-shadow:
+        rgba(0, 0, 0, 0.3) 0px -19px 38px,
+        rgba(0, 0, 0, 0.22) 0px -15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border-radius: 16px;
+    padding: 10px;
+   
+  }
+
+.dropdown-menu{ 
+    background: rgba(255, 255, 255, 0.295);
+    box-shadow:
+        rgba(0, 0, 0, 0.3) 0px -19px 38px,
+        rgba(0, 0, 0, 0.22) 0px -15px 12px;
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.dropdown-menu ul{
+   margin: 10px;
+}
+
+
 
 /* form register */
 
@@ -336,15 +433,22 @@ progress {
 /* carousel */
 .carousel {
     width: 75%;
+}
 
+@media (max-width: 991.98px) {
+    .carousel {
+        width: 100%;
+    }
 }
 
 .carousel-inner {
+    display: flex;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.11);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     backdrop-filter: blur(7.2px);
     -webkit-backdrop-filter: blur(7.2px);
+
 }
 
 .carousel-item {
@@ -353,9 +457,6 @@ progress {
 
 .slide-carousel {
     width: 100%;
-
-
-
 }
 
 /* cardGame */
@@ -440,6 +541,7 @@ progress {
     -webkit-backdrop-filter: blur(7.2px);
     border: 1px solid rgba(255, 255, 255, 0.34);
     padding: 20px 10px;
+    margin: 20px 0px;
 }
 
 .chatContainerContent {
@@ -459,7 +561,7 @@ progress {
     padding-left: 10px;
 }
 
-.avatar-chat{
+.avatar-chat {
     width: 35px;
     height: 35px;
     border-radius: 100%;
@@ -467,27 +569,28 @@ progress {
     flex-shrink: 0;
 }
 
-.message-container{
-    
+.message-container {
+
     border: 1px solid rgb(0, 182, 233);
     border-radius: 0px 50px 10px 40px;
     padding: 10px;
     max-width: 350px;
     margin-top: 25px;
-    margin-right:20px ;
+    margin-right: 20px;
 }
-.my-message-container{
-    
+
+.my-message-container {
+
     border: 1px solid rgb(226, 20, 199);
     border-radius: 50px 0px 40px 10px;
     padding: 10px;
     max-width: 350px;
     margin-top: 25px;
-    margin-right:20px ;
+    margin-right: 20px;
 }
 
 /* Account settings */
-.form-account{
+.form-account {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -504,7 +607,7 @@ progress {
     border: 1px solid rgba(255, 255, 255, 0.34);
 }
 
-.input-account-setting{
+.input-account-setting {
     border-radius: 15px;
     width: 80%;
     height: 40px;
@@ -515,7 +618,8 @@ progress {
     color: white;
     padding-left: 10px;
 }
-.avatar-account-settings{
+
+.avatar-account-settings {
     border-radius: 100%;
     object-fit: cover;
     flex-shrink: 0;
