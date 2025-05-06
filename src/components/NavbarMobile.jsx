@@ -25,17 +25,21 @@ function NavbarMobile() {
             </ul>
             <ul className="w-25 d-flex justify-content-center align-items-center">
                 <li className="d-flex justify-content-center">
-                    <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                        Category
+                    <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <img src="./category.png" className="logo-nav-img-mobile" alt="Logo HelixBit" />
                     </a>
                 </li>
             </ul>
             <ul className="w-25 d-flex justify-content-center align-items-center">
                 <li className="">
                     {session ?
-                        <Link to="/profile">Favorite</Link> 
+                        <Link to="/profile">
+                            <img src="./favorite.png" className="logo-nav-img-mobile" alt="Logo HelixBit" />
+                            </Link>
                         :
-                        <Link to="/register">Register</Link>
+                        <Link to="/register">
+                            <img src="./favorite.png" className="logo-nav-img-mobile" alt="Logo HelixBit" />
+                            </Link>
                     }
                 </li>
             </ul>
@@ -43,11 +47,11 @@ function NavbarMobile() {
                 <li className="d-flex justify-content-center">
                     <div className="dropdown">
                         <a className=" " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="./account.png" className="logo-nav-img-mobile" alt="Logo HelixBit" />
+                            <img src="./account.png" className="logo-nav-img-mobile" alt="Logo HelixBit" />
                         </a>
                         {session ?
-                            <ul className="dropdown-menu blur-dropdown"  
-                            style={{padding: '10px' }}>
+                            <ul className="dropdown-menu blur-dropdown"
+                                style={{ padding: '10px' }}>
                                 <li className="py-2 my-1 blur-dropdown">
                                     <Link to="/account">Account Setting</Link>
                                 </li>
@@ -56,8 +60,8 @@ function NavbarMobile() {
                                 </li>
 
                             </ul> :
-                            <ul className="dropdown-menu blur-dropdown" 
-                            style={{padding: '10px' }}>
+                            <ul className="dropdown-menu blur-dropdown"
+                                style={{ padding: '10px' }}>
                                 <li className="py-2 my-1 blur-dropdown">
                                     <Link to="/login">Login</Link>
                                 </li>
