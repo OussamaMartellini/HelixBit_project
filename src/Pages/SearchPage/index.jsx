@@ -22,7 +22,6 @@ function SearchPage() {
         const newUrl = `${apiUrl}games?key=${apiKey}&search=${game}&page=${page}`;
         setCurrentUrl(newUrl);
         updateUrl(newUrl);
-        console.log(page);
     }, [page])
 
     useEffect(() => {
