@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import SessionContext from "../../context/SessionContext";
 import FavoritesContext from "../../context/FavoritesContext";
+import CardFavorite from "../../components/CardFavorite";
 
 function ProfilePage() {
     const { session } = useContext(SessionContext);
@@ -8,8 +9,16 @@ function ProfilePage() {
 
     return (
         <div className="container-fluid">
-            <h2>hey {session?.user.user_metadata.first_name} 👌</h2>
-            <details>
+            <h1 className="text-center my-5">{session?.user.user_metadata.first_name}'s Favorite Page 🫶</h1>
+            <div className="row">
+{/* {console.log(favorites)
+} */}
+            {favorites.map((game) => (
+                <CardFavorite key={game.id} game={game} removeFavorite={removeFavorite} />
+            ))}
+            </div>
+           
+            {/* <details>
                 <summary>Preferiti</summary>
                 {favorites.length === 0 && <p>Non ci sono preferiti al momento...</p> }
                 <ul>
@@ -23,7 +32,7 @@ function ProfilePage() {
                         </li>
                     ))}
                 </ul>
-            </details>
+            </details> */}
         </div>
     )
 }

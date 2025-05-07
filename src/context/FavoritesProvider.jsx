@@ -29,6 +29,7 @@ function FavoritesProvider({ children }) {
                 game_id: game.id,
                 game_name: game.name,
                 game_image: game.background_image,
+                game_slug: game.slug
             },
         ]).select();
     }

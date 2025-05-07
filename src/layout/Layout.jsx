@@ -21,7 +21,7 @@ function Layout() {
                         <Sidebar />
                     </div>
 
-                    <main className=" main-content p-0 d-flex justify-content-center">
+                    <main className=" main-content p-0 d-flex justify-content-center min-vh-100">
                         <Outlet />
                     </main>
                 </div>

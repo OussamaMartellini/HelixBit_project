@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import supabase from '../supabase/supabase-client'
 
- function Avatar({ url, size, onUpload }) {
+function Avatar({ url, size, onUpload }) {
   const [avatarUrl, setAvatarUrl] = useState(null)
   const [uploading, setUploading] = useState(false)
 
@@ -50,7 +50,7 @@ import supabase from '../supabase/supabase-client'
   }
 
   return (
-    <div className='d-flex align-items-center justify-content-center w-100'>
+    <div className='avatar-container'>
       {avatarUrl ? (
         <img
           src={avatarUrl}
@@ -61,14 +61,14 @@ import supabase from '../supabase/supabase-client'
       ) : (
         <div className="avatar no-image me-2" style={{ height: size, width: size }} />
       )}
-      <div style={{ width: size }}>
-        <input
+      <div>
+        <input className='mt-2'
           type="file"
           id="single"
           accept="image/*"
           onChange={uploadAvatar}
           disabled={uploading}
-          className='ms-2'
+
         />
       </div>
     </div>

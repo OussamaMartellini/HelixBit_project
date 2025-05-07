@@ -89,7 +89,7 @@ function AccountPage() {
 
 
     return (
-        <div className="container-fluid d-flex  p-5 mt-5 justify-content-center">
+        <div className="container-fluid d-flex p-5 mt-5 justify-content-center">
             <form onSubmit={updateProfile} className="form-account">
         <h1 className="text-center pb-4">Profile Settings</h1>
                 <Avatar

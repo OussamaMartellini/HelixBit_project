@@ -35,11 +35,11 @@ function NavbarMobile() {
                     {session ?
                         <Link to="/profile">
                             <img src="./favorite.png" className="logo-nav-img-mobile" alt="Logo HelixBit" />
-                            </Link>
+                        </Link>
                         :
                         <Link to="/register">
                             <img src="./favorite.png" className="logo-nav-img-mobile" alt="Logo HelixBit" />
-                            </Link>
+                        </Link>
                     }
                 </li>
             </ul>
@@ -52,22 +52,21 @@ function NavbarMobile() {
                         {session ?
                             <ul className="dropdown-menu blur-dropdown"
                                 style={{ padding: '10px' }}>
-                                <li className="py-2 my-1 blur-dropdown">
-                                    <Link to="/account">Account Setting</Link>
-                                </li>
+                                
+                                    <Link to="/account"><li className="py-2 my-1 blur-dropdown">Account Setting</li></Link>
+                                
                                 <li className="py-2 my-1 justify-content-center d-flex ">
                                     <button className="btn btn-outline-danger blur-dropdown " onClick={signOut}>Logout</button>
                                 </li>
-
                             </ul> :
                             <ul className="dropdown-menu blur-dropdown"
                                 style={{ padding: '10px' }}>
-                                <li className="py-2 my-1 blur-dropdown">
-                                    <Link to="/login">Login</Link>
-                                </li>
-                                <li className="py-2 my-1 blur-dropdown">
-                                    <Link to="/register">Register</Link>
-                                </li>
+                                <Link to="/login" className="">                                <li className="py-2 my-1 blur-dropdown d-flex justify-content-center">Login</li>
+                                </Link>
+
+
+                                <Link to="/register" ><li className="py-2 my-1 blur-dropdown d-flex justify-content-center">Register</li>
+                                </Link>
 
                             </ul>
                         }

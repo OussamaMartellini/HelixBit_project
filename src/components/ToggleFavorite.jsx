@@ -8,6 +8,7 @@ function ToggleFavorite({ data }) {
     const isFavorite = () => favorites.find((el) => +el.game_id === data?.id);
 
 
+ 
     return (
         <div> {isFavorite() ? 
         <button onClick={()=> removeFavorite(data.id)}>

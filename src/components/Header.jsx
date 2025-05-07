@@ -60,7 +60,7 @@ function Header() {
                                 <p className="m-0">Hey {session?.user.user_metadata.first_name} ✌️</p>
                             </li>
                             <li className="mx-2 d-flex align-items-center">
-                                <Link to="/profile">Profile</Link>
+                                <Link to="/profile">Favorite</Link>
                             </li>
                             <li className="mx-2 d-flex align-items-center">
                                 <Link to="/account">Account Setting</Link>
