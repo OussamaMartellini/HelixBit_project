@@ -11,19 +11,26 @@ function SearchPage() {
     const apiKey = import.meta.env.VITE_API_KEY;
     const apiUrl = import.meta.env.VITE_API_URL;
 
-    const initialUrl = `${apiUrl}games?key=${apiKey}&search=${game}`;
 
     const [page, setPage] = useState(1);
-    const [currentUrl, setCurrentUrl] = useState(
-        `${apiUrl}games?key=${apiKey}&search=${game}&page=1`
-    );
+    const [currentUrl, setCurrentUrl] = useState(`${apiUrl}games?key=${apiKey}&search=${game}&page=1`);
     const { data, loading, error, updateUrl } = useFetchSolution(currentUrl);
 
+  
+    
     useEffect(() => {
         const newUrl = `${apiUrl}games?key=${apiKey}&search=${game}&page=${page}`;
         setCurrentUrl(newUrl);
         updateUrl(newUrl);
+        console.log(page);
     }, [page])
+
+    useEffect(() => {
+        setPage(1)
+        const newUrl = `${apiUrl}games?key=${apiKey}&search=${game}&page=1`;
+        setCurrentUrl(newUrl);
+        updateUrl(newUrl);    
+    },[game])
 
     const totalPages = data ? Math.ceil(data.count / 20) : 1;
 
